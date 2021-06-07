@@ -11,9 +11,9 @@ class HornedBeast extends React.Component{
     }
 
     incrementNumberOFlikes=()=>{
-        this.setState=({
+        this.setState({
             numlikes:this.state.numlikes+1
-        })
+        });
     }
 
     render(){
