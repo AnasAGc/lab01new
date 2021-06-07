@@ -3,6 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import CardGroup from 'react-bootstrap/CardGroup'
 
 class HornedBeast extends React.Component{
 
@@ -37,6 +38,14 @@ class HornedBeast extends React.Component{
                         <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
                 </Card>
+
+
+
+    
+
+
+
+                
 
             </div>
         );
