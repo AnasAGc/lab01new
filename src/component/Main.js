@@ -12,28 +12,25 @@ class Main extends React.Component {
 
         return (
 
-            <div className='main' >
-                <CardColumns>
 
+            <CardColumns >
 
-                {rawData.map((item, index) => {
+                <div  >
+                    
+                    {rawData.map((item, index) => {
 
-                    return (
+                        return (
                             <HornedBeast alt={item.keyword} description={item.description} title={item.title} url={item.image_url} />
 
-                    )
+                        )
+
+                    })}
 
 
-
-
-
-                })}
-
-     
-
+                </div>
             </CardColumns>
-            </div>
-            
+
+
 
 
         )
