@@ -15,17 +15,15 @@ code {
 img{
   width: 600px;
 }
-*{
-  text-align: center;
-}
 
+/* 
 .card{
   width: 710px;
   border: 1px solid black ;
   margin-left: auto;
   margin-right: auto;
 
-}
+} */
 
 .footer{
   text-align: center;
