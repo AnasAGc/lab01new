@@ -12,17 +12,17 @@ class Main extends React.Component {
     datahorns=(event)=>{
             let numberofhorns=parseInt(event.target.value);
             let allhorns=datahorns;
-            let newHorns;
+            let newwHorns;
             if (numberofhorns){
-                newHorns=allhorns.filter(item=>{
+                newwHorns=allhorns.filter(item=>{
                     if(item.horns===numberofhorns){
                         return item;
                     }
                 })
             }else{
-                newHorns=allhorns;
+                newwHorns=allhorns;
             }
-            this.props.newFunction(newHorns)
+            this.props.newFunction(newwHorns)
         }
     
 
@@ -36,7 +36,7 @@ class Main extends React.Component {
 
         return (
 
-            <>
+            <div className='cards'>
                 <Form >
                     <Form.Group controlId="exampleForm.SelectCustom">
                         <Form.Label>Select Number Of Honor</Form.Label>
@@ -48,14 +48,13 @@ class Main extends React.Component {
                         </Form.Control>
                     </Form.Group>
                 </Form>
-                <CardColumns >
 
-                    <div  >
+                    <div  className="incard" >
 
                         {this.props.dataFile.map((item, index) => {
 
                             return (
-                                <HornedBeast alt={item.keyword} description={item.description} title={item.title} url={item.image_url} />
+                                <HornedBeast ket="index" alt={item.keyword} description={item.description} title={item.title} url={item.image_url} />
 
                             )
 
@@ -63,9 +62,8 @@ class Main extends React.Component {
 
 
                     </div>
-                </CardColumns>
 
-            </>
+            </div>
 
 
         )
