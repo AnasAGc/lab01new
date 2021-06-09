@@ -18,6 +18,7 @@ class Main extends React.Component {
                     if(item.horns===numberofhorns){
                         return item;
                     }
+                    
                 })
             }else{
                 newwHorns=allhorns;
