@@ -1,38 +1,71 @@
 
 import React from 'react';
 import HornedBeast from './HornedBeast';
-
+import { Form } from 'react-bootstrap';
+import datahorns from './data.json'
 import CardColumns from 'react-bootstrap/CardColumns';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class Main extends React.Component {
 
+    datahorns=(event)=>{
+            let numberofhorns=parseInt(event.target.value);
+            let allhorns=datahorns;
+            let newHorns;
+            if (numberofhorns){
+                newHorns=allhorns.filter(item=>{
+                    if(item.horns===numberofhorns){
+                        return item;
+                    }
+                })
+            }else{
+                newHorns=allhorns;
+            }
+            this.props.newFunction(newHorns)
+        }
     
+
+
+
 
     render() {
 
+
+
+
         return (
 
+            <>
+                <Form >
+                    <Form.Group controlId="exampleForm.SelectCustom">
+                        <Form.Label>Select Number Of Honor</Form.Label>
+                        <Form.Control as="select" custom name='numOfHoner' onChange={this.datahorns}>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="100">100</option>
+                        </Form.Control>
+                    </Form.Group>
+                </Form>
+                <CardColumns >
 
-            <CardColumns >
+                    <div  >
 
-                <div  >
+                        {this.props.dataFile.map((item, index) => {
 
-                    {this.props.dataFile.map((item, index) => {
+                            return (
+                                <HornedBeast alt={item.keyword} description={item.description} title={item.title} url={item.image_url} />
 
-                        return (
-                            <HornedBeast alt={item.keyword} description={item.description} title={item.title} url={item.image_url} />
+                            )
 
-                        )
-
-                    })}
+                        })}
 
 
-                </div>
-            </CardColumns>
+                    </div>
+                </CardColumns>
 
-
+            </>
 
 
         )
