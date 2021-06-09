@@ -2,8 +2,6 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { Modal } from 'react-bootstrap';
 import SelectedBeast from './SelectedBeast ';
 
 class HornedBeast extends React.Component {
