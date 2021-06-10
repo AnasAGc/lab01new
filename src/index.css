@@ -17,7 +17,7 @@ code {
  
 }
 
-.incard{
+.outcards{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
   grid-template-rows: 1fr 1fr 1fr;
@@ -26,6 +26,7 @@ code {
 }
 
 
-.card{
-  padding: 15px;
+.incards{
+  padding: 10px;
+  padding-left: 25px ;
 }

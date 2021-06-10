@@ -36,7 +36,7 @@ class Main extends React.Component {
 
         return (
 
-            <div className='cards'>
+            <div >
                 <Form >
                     <Form.Group controlId="exampleForm.SelectCustom">
                         <Form.Label>Select Number Of Honor</Form.Label>
@@ -49,7 +49,7 @@ class Main extends React.Component {
                     </Form.Group>
                 </Form>
 
-                    <div  className="incard" >
+                    <div  className="outcards" >
 
                         {this.props.dataFile.map((item, index) => {
 
